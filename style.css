@@ -937,12 +937,22 @@ body {
 	position: relative;
 }
 
-.no-header-image .custom-header-image {
+.custom-header-video {
+	position: relative;
+}
+
+.no-header-image .custom-header-image,
+.custom-header-video {
 	padding: 5% 0;
 }
 
+.custom-header-video video {
+	max-width: 100%;
+}
+
 body:not(.no-header-image) .custom-header-image:before,
-.twentyseventeen-front-page .custom-header-image:before {
+.twentyseventeen-front-page .custom-header-image:before,
+.twentyseventeen-front-page .custom-header-video:before {
 	background: rgba(0,0,0,0.5);
 	bottom: 0;
 	content: "";
@@ -2307,7 +2317,8 @@ article.panel-placeholder {
 		margin-top: 0 !important; /* Override styles added with JavaScript */
 	}
 
-	.twentyseventeen-front-page .custom-header-image {
+	.twentyseventeen-front-page .custom-header-image,
+	.twentyseventeen-front-page .custom-header-video {
 		height: 1200px;
 		height: 100vh;
 		height: calc( 100vh - 85px );

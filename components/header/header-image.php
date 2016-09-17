@@ -2,7 +2,16 @@
 <div class="custom-header">
 	<?php
 		$header_image = get_header_image();
+		$header_video = get_header_video();
 
+		// If this is the front page
+		if ( is_front_page() && ! empty( $header_video ) ) : ?>
+			<div class="custom-header-video">
+				<video src="<?php header_video(); ?>" autoplay loop width="<?php echo esc_attr( get_custom_header()->video_width ); ?>" height="<?php echo esc_attr( get_custom_header()->video_height ); ?>"</video>
+			</div>
+		<?php endif; ?>
+
+		<?php
 		// If this is a single post or page with a featured image
 		if ( has_post_thumbnail() && is_singular() ) :
 			$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
