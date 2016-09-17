@@ -27,6 +27,12 @@ function twentyseventeen_custom_header_setup() {
 		'height'                 => 1200,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'twentyseventeen_header_style',
+
+		'default-video'          => 'https://videos.files.wordpress.com/edDbGtjL/img_1844_fmt1.ogv',
+		'video-autoplay'         => true,
+		'video-loop'             => true,
+		'video-width'            => 500,
+		'video-height'           => 300,
 	) ) );
 }
 add_action( 'after_setup_theme', 'twentyseventeen_custom_header_setup' );
