@@ -9,11 +9,10 @@
 			<div class="custom-header-video">
 				<video src="<?php header_video(); ?>" autoplay loop width="<?php echo esc_attr( get_custom_header()->video_width ); ?>" height="<?php echo esc_attr( get_custom_header()->video_height ); ?>"</video>
 			</div>
-		<?php endif; ?>
 
 		<?php
 		// If this is a single post or page with a featured image
-		if ( has_post_thumbnail() && is_singular() ) :
+		elseif ( has_post_thumbnail() && is_singular() ) :
 			$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 			$thumbnail_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'twentyseventeen-featured-image' );
 			?>
