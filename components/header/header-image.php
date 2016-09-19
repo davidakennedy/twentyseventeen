@@ -7,12 +7,13 @@
 		// If this is the front page
 		if ( is_front_page() && ! empty( $header_video ) ) : ?>
 			<div class="custom-header-video">
-				<video src="<?php header_video(); ?>" autoplay loop width="<?php echo esc_attr( get_custom_header()->video_width ); ?>" height="<?php echo esc_attr( get_custom_header()->video_height ); ?>"</video>
+				<video src="<?php header_video(); ?>" autoplay loop muted controls></video>
+				<?php get_template_part( 'components/header/site', 'branding' ); ?>
 			</div>
 
 		<?php
 		// If this is a single post or page with a featured image
-		elseif ( has_post_thumbnail() && is_singular() ) :
+		elseif ( ! is_front_page() && has_post_thumbnail() && is_singular() ) :
 			$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 			$thumbnail_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'twentyseventeen-featured-image' );
 			?>

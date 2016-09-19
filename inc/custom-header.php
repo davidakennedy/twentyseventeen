@@ -27,7 +27,7 @@ function twentyseventeen_custom_header_setup() {
 		'height'                 => 1200,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'twentyseventeen_header_style',
-		'default-video'          => get_template_directory_uri() . '/assets/videos/img_1844_fmt1.ogv',
+		'default-video'          => get_template_directory_uri() . '/assets/videos/whistlerwater_hd.mp4',
 		'video-width'            => 2000,
 		'video-height'           => 1200,
 	) ) );
