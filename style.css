@@ -895,6 +895,16 @@ body {
 	text-align: center;
 }
 
+.header-video .site-branding {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	position: absolute;
+		top: 0;
+	width: 100%;
+}
+
 .site-branding a {
 	color: #fff;
 	text-decoration: none;
@@ -945,8 +955,10 @@ body {
 	position: relative;
 }
 
-.custom-header-video video{
-	min-width: 100%;
+.custom-header-video video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 
@@ -2232,12 +2244,6 @@ article.panel-placeholder {
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-	}
-
-	.header-video .site-branding {
-		position: absolute;
-			top: 0;
-		width: 100%;
 	}
 
 	.site-title {
