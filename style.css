@@ -846,6 +846,10 @@ body {
 	background-color: #333;
 }
 
+.header-video .site-header {
+	background-color: transparent;
+}
+
 /* Header top */
 .header-top {
 	background-color: #29292a;
@@ -937,6 +941,10 @@ body {
 	position: relative;
 }
 
+.custom-header-video {
+	position: relative;
+}
+
 .custom-header-video video{
 	min-width: 100%;
 }
@@ -948,6 +956,16 @@ body {
 
 body:not(.no-header-image) .custom-header-image:before,
 .twentyseventeen-front-page .custom-header-image:before {
+	background: rgba(0,0,0,0.5);
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.twentyseventeen-front-page .custom-header-video:before {
 	background: rgba(0,0,0,0.5);
 	bottom: 0;
 	content: "";
@@ -2214,6 +2232,12 @@ article.panel-placeholder {
 		align-items: center;
 		justify-content: center;
 		height: 100%;
+	}
+
+	.header-video .site-branding {
+		position: absolute;
+			top: 0;
+		width: 100%;
 	}
 
 	.site-title {

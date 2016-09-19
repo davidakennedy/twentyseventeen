@@ -35,9 +35,15 @@ function twentyseventeen_body_classes( $classes ) {
 	}
 
 	// Add class if no custom header or featured images
-	$header_image = get_header_image();
+	/*$header_image = get_header_image();
 	if ( '' == $header_image && ( ! has_post_thumbnail( $post->ID ) || is_home() ) ) {
 		$classes[] = 'no-header-image';
+	}*/
+
+	// Add class if no custom header or featured images
+	$header_video = get_header_video();
+	if ( '' !== $header_video && is_front_page() ) {
+		$classes[] = 'header-video';
 	}
 
 	// Add class if footer image has been added
