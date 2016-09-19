@@ -965,7 +965,7 @@ body:not(.no-header-image) .custom-header-image:before,
 	top: 0;
 }
 
-.twentyseventeen-front-page .custom-header-video:before {
+.custom-header-video:before {
 	background: rgba(0,0,0,0.5);
 	bottom: 0;
 	content: "";
