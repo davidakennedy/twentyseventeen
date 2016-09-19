@@ -7,7 +7,7 @@
 		// If this is the front page
 		if ( is_front_page() && ! empty( $header_video ) ) : ?>
 			<div class="custom-header-video">
-				<video src="<?php header_video(); ?>" autoplay loop muted controls></video>
+				<video src="<?php header_video(); ?>" autoplay loop muted></video>
 				<?php get_template_part( 'components/header/site', 'branding' ); ?>
 			</div>
 
